@@ -1,0 +1,199 @@
+body {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #8357eb;
+}
+
+.score {
+    color: rgb(248, 84, 174);
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.score u {
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 40px auto;
+    background-color: #020007;
+}
+
+td {
+    color: hsl(327, 100%, 50%);
+    background: #020007;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #aa9d9d;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #e4dddd;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #080808;
+    color: rgb(248, 84, 174);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes burningX {
+    0% {
+        box-shadow: -5px 0 20px 10px hsl(327, 100%, 50%), 
+                    5px 0 20px 10px hsl(327, 100%, 50%);
+    }
+
+    25% {
+        box-shadow: -5px 0 40px 20px hsl(327, 100%, 50%);
+    }
+
+    50% {
+        box-shadow: -5px 0 20px 10px hsl(327, 100%, 50%), 
+                    5px 0 20px 10px hsl(327, 100%, 50%);
+    }
+    
+    75% {
+        box-shadow: -5px 0 40px 20px hsl(327, 100%, 50%),
+                    5px 0 40px 20px hsl(327, 100%, 50%);
+    }
+
+    100% {
+        box-shadow: -5px 0 20px 10px hsl(327, 100%, 50%),
+                    5px 0 20px 10px hsl(327, 100%, 50%);
+    }
+}
+
+
+.burningX {
+    animation: burningX 2s infinite;
+}
+
+@keyframes burningO {
+    0% {
+        box-shadow: 0 0 20px 10px #ADFF2F;
+    }
+
+    50% {
+        box-shadow: 0 0 40px 20px #ADFF2F;
+    }
+
+    100% {
+        box-shadow: 0 0 20px 10px #ADFF2F;
+    }
+}
+
+.burningO {
+    animation: burningO 1s infinite;
+}
+
+.score {
+    left: 15%;
+    top: 26%;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.score u {
+    font-size: 20px;
+}
+
+.winner-message {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+}
+
+.info {
+    position: absolute;
+    width: 25%;
+    top: 28%;
+    right: 20px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    color: #f848ae;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info p {
+    margin: 5px;
+}
+
+.info u {
+    padding-bottom: 30px;
+    font-size: 25px;
+}
+
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+}
+
+main {
+    margin-bottom: 80px;
+    transition: all 0.5s;
+    -webkit-text-stroke: 4px #d6f4f4;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: 5rem;
+    text-align: center;
+    color: transparent;
+    font-family: "Meta", sans-serif;
+    text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    45px 45px 10px #482896;
+    cursor: pointer;
+}
+
+main:hover {
+    font-variation-settings: "wght" 100, "ital" 0;
+    text-shadow: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+    <main>Крестики-нолики</main>
+    <table>
+        <tr>
+            <td data-cell="0"></td>
+            <td data-cell="1"></td>
+            <td data-cell="2"></td>
+        </tr>
+        <tr>
+            <td data-cell="3"></td>
+            <td data-cell="4"></td>
+            <td data-cell="5"></td>
+        </tr>
+        <tr>
+            <td data-cell="6"></td>
+            <td data-cell="7"></td>
+            <td data-cell="8"></td>
+        </tr>
+    </table>
+
+    <button class="reset-btn">Начать новую игру</button>
+
+    <div class="score">
+        <u>Счёт игры:</u>
+        <p>X: <span id="xScore">0</span></p>
+        <p>O: <span id="oScore">0</span></p>
+    </div>
+
+    <div class="info">
+        <u>ПРАВИЛА ИГРЫ:</u>
+        <p>1. Играют два игрока - X и O.</p>
+        <p>2. Цель игры - заполнить вертикаль, горизонталь или диагональ своими символами.</p>
+        <p>3. Игра продолжается до 5 побед.</p>
+    </div>
+
+    <div class="winner-message" id="winnerMessage"></div>
+
+
+    <script src="src/js/scrip.js"></script>
+</body>
+
+</html>
